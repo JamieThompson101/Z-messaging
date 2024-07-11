@@ -15,29 +15,39 @@
             <!-- dynamically change profile button to user pfp if logged in? -->
             <button class="profile-button">Profile</button>
         </div>
-        <div class="row content">
-            <div class="col col-3 recent">
-                <!-- column, about 1/3 of page, for recent chats -->
-                 <div class="row recent-search">
-                    <!-- search area -->
-                 </div>
-                 <div class="row recent-messages">
-                    <!-- to be populated with actual users -->
-                 </div>
-            </div>
-            <div class="col chat">
-                <!-- rest of page for chat section -->
-                <div class="row banner">
-                    <!-- recipient pfp and name displayed above messages -->
-                </div>
-                <div class="row messages">
-                    <!-- row for messages -->
-                </div>
-                <div class="row input">
-                    <!-- row for typing messages and send button etc -->
-                </div>
-            </div>
-        </div>
+        <Link to="/signup"> Go to Signup</Link>
+
+          <h2>Login</h2>
+          <form onSumbit={handleFormSubmit}>
+          <div className="flex-row space-between my-2">
+          <label htmlFor="email">Email address:</label>
+          <input
+          placeholder="youremail@test.com"
+          name="email"
+          type="email"
+          id="email"
+          onChange={handleChange}
+          />
+          </div>
+          <div className="flex-row space-between my-2">
+          <label htmlFor="pwd">Password:</label>
+          <input
+          placeholder="******"
+          name="password"
+          type="password"
+          id="pwd"
+          onChange={handleChange}
+          />
+          </div>
+          <!-- {error ? (
+          <div>
+          <p className="error-text">The provided credentials are incorrect</p>
+          </div>
+          ) : null} -->
+          <div className="flex-row flex-end">
+          <button type="submit">Submit</button>
+          </div>
+          </form>
     </div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
