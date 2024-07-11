@@ -36,24 +36,3 @@ h1 {
     background-color: lightgray;
     cursor: pointer;
 }
-
-/* recent chats styling */
-.recent {
-    margin: auto;
-    border-right: solid;
-}
-
-.recent-search-btn {
-    margin: 20px;
-}
-
-.recent-search-text {
-    margin: 20px;
-}
-
-
-/* general chat styling */
-.banner {
-    border-bottom: solid;
-    display: flex;
-}
