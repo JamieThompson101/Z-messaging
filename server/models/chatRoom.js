@@ -7,7 +7,7 @@ const chatSchema = new Schema(
             required: true,
         },
         chatParticipants: {
-            type: boolean,
+            type: Boolean,
             required: true,
         },
         users: [
