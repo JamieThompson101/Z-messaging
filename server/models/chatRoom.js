@@ -1,4 +1,4 @@
- const { chatRoom, users } = require('mongoose');
+  import { Schema, model } from 'mongoose';
 
 const chatSchema = new Schema(
     {
@@ -23,9 +23,7 @@ const chatSchema = new Schema(
         },
         id: false,
     }
-);
-
-const chatRoom = mongoose.model('chatRoom', chatSchema);
-
+);  
+const chatRoom = model('chatRoom', chatSchema);
 // add this later when necessary
-module.exports = {users, chatRoom};
+module.exports = { chatRoom };
