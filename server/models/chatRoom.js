@@ -25,6 +25,7 @@ const chatSchema = new Schema(
     }
 );
 
-const chatRoom = model('course', courseSchema);
+//const chatRoom = model('course', courseSchema);
 
+// add this later 
 module.export = chatRoom;
