@@ -9,12 +9,12 @@ let schema = mongoose.Schema({
             max: 400,
         },
         sender: {
-            type: mongoose.Schema.Type.ObjectId,
+            type: mongoose.Schema.Types.ObjectId,
             ref: 'User'
         }
     }],
     participant1: [{
-        type: mongoose.Schema.Type.ObjectId,
+        type: mongoose.Schema.Types.ObjectId,
         ref: 'User'
     }],
     participant2: [{
@@ -23,4 +23,4 @@ let schema = mongoose.Schema({
     }]
 });
 
-module.exports = { typeDefs, resolvers, };
+module.exports = { typeDefs, resolvers};
