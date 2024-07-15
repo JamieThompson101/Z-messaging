@@ -2,12 +2,14 @@ import { Outlet } from 'react-router-dom';
 
 const App = () => {
     return (
-        <div class="container">
-            <div class="row navbar">
+        <div className="container">
+            <div className="row navbar">
                 <h1>Z-messaging</h1>
-                <button class="profile-button">Profile</button>
+                <button className="profile-button">Profile</button>
             </div>
             <Outlet />
         </div>
     )
 }
+
+export default App;
