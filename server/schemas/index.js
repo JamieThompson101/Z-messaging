@@ -1,5 +1,6 @@
 const typeDefs = require('./typeDefs');
 const resolvers = require('./resolvers');
+const mongoose = require('mongoose');
 
 let chatSchema = mongoose.Schema({
     messages: [{

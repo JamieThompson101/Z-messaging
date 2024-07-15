@@ -5,18 +5,20 @@ const chatSchema = new Schema(
         chatName: {
             type: String,
             required: true,
-        },
-        chatParticipants: {
-            type: Boolean,
-            required: true,
-        },
+        }, 
+     
         users: [
             {
             type: Schema.Types.ObjectId,
             ref: 'User',
             },
-        ],
+        ], 
+        messages: {
+            type: String,
+            required: false,
+        },
     },
+       
     {
         toJSON: {
             virtual: true,
