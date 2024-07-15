@@ -2,7 +2,7 @@ const typeDefs = require('./typeDefs');
 const resolvers = require('./resolvers');
 const mongoose = require('mongoose');
 
-let chatSchema = mongoose.Schema({
+let schema = mongoose.Schema({
     messages: [{
         text: {
             type: String,
@@ -23,4 +23,4 @@ let chatSchema = mongoose.Schema({
     }]
 });
 
-module.exports = { typeDefs, resolvers };
+module.exports = { typeDefs, resolvers, };
