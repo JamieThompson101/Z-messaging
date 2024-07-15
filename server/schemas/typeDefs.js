@@ -1,26 +1,25 @@
 const typeDefs = `
-  type Tech {
+  type User {
     _id: ID!
     name: String!
+    email: String!
   }
 
-  type Matchup {
+  type Chat {
     _id: ID!
-    tech1: String!
-    tech2: String!
-    tech1_votes: Int
-    tech2_votes: Int
+    user: User!
+    message: String!
   }
 
   type Query {
-    tech: [Tech]
-    matchups(_id: String): [Matchup]
+    users: [User]
+    chatRoom: [Chat]
   }
 
   type Mutation {
-    createMatchup(tech1: String!, tech2: String!): Matchup
-    createVote(_id: String!, techNum: Int!): Matchup
-  }
+    addUser(name: String!, email: String!): User
+    addChat(user: ID!, message: String!): Chat
+}
 `;
 
 module.exports = typeDefs;
