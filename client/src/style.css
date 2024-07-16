@@ -46,8 +46,14 @@ h2 {
     background-color: lightgray;
 }
 
-/* Login styling */
+/* Login and signup styling */
 .login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.signup {
     display: flex;
     align-items: center;
     justify-content: center;

@@ -15,9 +15,9 @@
             <!-- dynamically change profile button to user pfp if logged in? -->
             <button class="profile-button">Profile</button>
         </div>
-        <div class="row login">
-            <form class="input" onSumbit={handleFormSubmit}>
-            <h2>Login</h2>
+        <div class="row signup">
+            <form class="input" onSubmit={handleFormSubmit}>
+            <h2>Signup</h2>
             <div class="email">
                 <label htmlFor="email">Email address:</label>
                 <input
@@ -38,15 +38,10 @@
                     onChange={handleChange}
                 />
             </div>
-            {error ? (
-                <div>
-                    <p className="error-text">The provided credentials are incorrect</p>
-                </div>
-            ) : null}
             <div class="submit">
                 <button type="submit">Submit</button>
             </div>
-            <Link to="/signup"> Go to Signup</Link>
+            <Link to="/login">Have an account? Login</Link>
             </form>
         </div>
     </div>
