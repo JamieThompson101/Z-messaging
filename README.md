@@ -23,18 +23,23 @@ Z-messaging is a full-stack messaging application built with [stream.io](https:/
 
 ## Features
 
-- **Real-time Messaging**: Instantly send and receive messages.
 - **User Authentication**: Secure user authentication and authorization.
-- **Group Chat**: Create and manage group conversations.
-- **Media Sharing**: Share images, videos, and files.
-- **Notifications**: Receive real-time notifications for new messages.
 - **Responsive Design**: Accessible on desktop and mobile devices.
-- **Search**: Easily find past conversations and messages.
-- **Customizable Settings**: Personalize your messaging experience.
+- **One to one**: One to one messaging makes your experience on z-messaging feel personalized.
+
+## Credits:
+
+[Zoe](https://github.com/zoellaphine)
+
+[Adam](https://github.com/Simplyareed)
+
+[Caleb](https://github.com/Hammerc124)
+
+[Jamie](https://github.com/JamieThompson101)
 
 ## Installation
 
-To run MessagingApp locally, follow these steps:
+To run Z-messaging locally, follow these steps:
 
 1. **Clone the repository**:
    ```
@@ -43,7 +48,7 @@ To run MessagingApp locally, follow these steps:
 
 2. **Navigate to the project directory**:
    ```
-   cd MessagingApp
+   cd Z-messaging
    ```
 
 3. **Install dependencies**:
@@ -76,8 +81,8 @@ To run MessagingApp locally, follow these steps:
 3. **Send Messages**:
    - Type your message and press enter to send it.
 
-4. **Explore Features**:
-   - Discover additional features like media sharing, notifications, and settings.
+4. **Enjoy the UI**:
+   - Our UI is beautifully designed for your viewing pleasure.
 
 ## Technologies Used
 
@@ -113,3 +118,7 @@ Contributions are welcome! To contribute to MessagingApp, follow these steps:
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
+
+## Questions:
+
+If you have any questions, feel free to add to our [issues](#issues).
