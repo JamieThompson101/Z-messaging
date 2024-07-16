@@ -10,12 +10,14 @@ const typeDefs = `
     message: String!
   }
   type Query {
-    users: [User]
-    chatRoom: [Chat]
+    getAllUsers: [User]
+    getAllChatRooms: [Chat]
+    getUserById(id: ID!): User
+    getChatRoomById(id: ID!): Chat
   }
   type Mutation {
-    addUser(name: String!, email: String!): User
-    addChat(user: ID!, message: String!): Chat
+    createUser(name: String!, email: String!): User
+    createChatRoom(user: ID!, message: String!): Chat
 }
 `;
 module.exports = typeDefs;
