@@ -15,11 +15,10 @@
             <!-- dynamically change profile button to user pfp if logged in? -->
             <button class="profile-button">Profile</button>
         </div>
-        <div className="row login">
-            <Link to="/signup"> Go to Signup</Link>
+        <div class="row login">
+            <form class="input" onSumbit={handleFormSubmit}>
             <h2>Login</h2>
-            <form onSumbit={handleFormSubmit}>
-            <div className="flex-row space-between my-2">
+            <div class="email">
                 <label htmlFor="email">Email address:</label>
                 <input
                     placeholder="youremail@test.com"
@@ -29,7 +28,7 @@
                     onChange={handleChange}
                 />
             </div>
-            <div className="flex-row space-between my-2">
+            <div class="password">
                 <label htmlFor="pwd">Password:</label>
                 <input
                     placeholder="******"
@@ -39,14 +38,15 @@
                     onChange={handleChange}
                 />
             </div>
-            <!-- {error ? (
+            {error ? (
                 <div>
                     <p className="error-text">The provided credentials are incorrect</p>
                 </div>
-            ) : null} -->
-            <div className="flex-row flex-end">
+            ) : null}
+            <div class="submit">
                 <button type="submit">Submit</button>
             </div>
+            <Link to="/signup"> Go to Signup</Link>
             </form>
         </div>
     </div>

@@ -11,11 +11,15 @@ h1 {
     margin-left: 20px;
 }
 
+h2 {
+    margin-top: 20px;
+}
+
 .col {
     display: inline-block;
 }
 
-/* navbar styling  */
+/* Navbar styling  */
 .navbar {
     background-color: gray;
     display: flex;
@@ -41,6 +45,42 @@ h1 {
 .profile-button:hover {
     background-color: lightgray;
 }
+
+/* Login styling */
+.login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.input {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    width: 350px;
+    background-color: lightgray;
+    border: none;
+}
+
+.email {
+    margin: 20px;
+}
+
+.password {
+    margin: 20px;
+    margin-top: 0;
+}
+
+.submit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
 
 /* Profile styling */
 .profile {
