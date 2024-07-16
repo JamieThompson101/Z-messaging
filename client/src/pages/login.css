@@ -1,0 +1,34 @@
+/* Login page styling */
+.login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.input {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    width: 350px;
+    background-color: lightgray;
+    border: none;
+}
+
+.email {
+    margin: 20px;
+}
+
+.password {
+    margin: 20px;
+    margin-top: 0;
+}
+
+.submit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
