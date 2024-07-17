@@ -1,27 +1,31 @@
 const users = [
     {
-        firstName: "John",
-        lastName: "Doe",
+        name: "John Doe",
+        username: "johndoe", // Concatenated username
         email: "john.doe@example.com",
-        password: "password123"
+        password: "password123",
+        
     },
     {
-        firstName: "Jane",
-        lastName: "Smith",
+        name: "Jane Smith",
+        username: "janesmith", // Concatenated username
         email: "jane.smith@example.com",
-        password: "password456"
+        password: "password456",
+     
     },
     {
-        firstName: "Alice",
-        lastName: "Johnson",
+        name: "Alice Johnson",
+        username: "alicejohnson",
         email: "alice.johnson@example.com",
-        password: "password789"
+        password: "password789",
+       
     },
     {
-        firstName: "Bob",
-        lastName: "Williams",
+        name: "Bob Williams",
+        username: "bobwilliams",
         email: "bob.williams@example.com",
-        password: "passwordabc"
+        password: "passwordabc",
+        
     }
 ];
 
