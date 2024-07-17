@@ -15,34 +15,67 @@
             <!-- dynamically change profile button to user pfp if logged in? -->
             <button class="profile-button">Profile</button>
         </div>
-        <div class="row signup">
-            <form class="input" onSubmit={handleFormSubmit}>
-            <h2>Signup</h2>
-            <div class="email">
-                <label htmlFor="email">Email address:</label>
-                <input
-                    placeholder="youremail@test.com"
-                    name="email"
-                    type="email"
-                    id="email"
-                    onChange={handleChange}
-                />
+        <div class="row content">
+            <div class="col-4 contacts">
+                <div class="users-container">
+                    <div class="search">
+                        <input class="search-text" placeholder="Search">
+                        <button type="button" class="search-btn">Search</button>
+                    </div>
+                    <ul class="users">
+                        <li class="person">
+                            <img src="https://www.bootdey.com/img/Content/avatar/avatar3.png">
+                            <span class="status"></span>
+                            <span class="name">John Doe</span>
+                        </li>
+                        <li class="person active">
+                            <img src="https://www.bootdey.com/img/Content/avatar/avatar3.png">
+                            <span class="status"></span>
+                            <span class="name">Jane Doe</span>
+                        </li>
+                        <li class="person">
+                            <img src="https://www.bootdey.com/img/Content/avatar/avatar3.png">
+                            <span class="status"></span>
+                            <span class="name">Jim Doe</span>
+                        </li>
+                        <li class="person">
+                            <img src="https://www.bootdey.com/img/Content/avatar/avatar3.png">
+                            <span class="status"></span>
+                            <span class="name">Jerk Doe</span>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <div class="password">
-                <label htmlFor="pwd">Password:</label>
-                <input
-                    placeholder="******"
-                    name="password"
-                    type="password"
-                    id="pwd"
-                    onChange={handleChange}
-                />
+            <div class="col-8 chat">
+                <div class="recipient">
+                    <span class="name">Jane Doe</span>
+                </div>
+                <div class="chat-container">
+                    <ul class="messages">
+                        <li class="chat-left">
+                            <div class="name-avatar">
+                                <img src="https://www.bootdey.com/img/Content/avatar/avatar3.png">
+                                <div class="chat-name">Jane Doe</div>
+                            </div>
+                            <div class="chat-message">
+                                Hello, how are you?
+                            </div>
+                        </li>
+                        <li class="chat-left">
+                            <div class="name-avatar">
+                                <img src="https://www.bootdey.com/img/Content/avatar/avatar3.png">
+                                <div class="chat-name">Jimathy Doe</div>
+                            </div>
+                            <div class="chat-message">
+                                I'm well, and you?
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="text">
+                        <textarea class="chat-text" placeholder="Z-messaging"></textarea>
+                    </div>
+                </div>
             </div>
-            <div class="submit">
-                <button type="submit">Submit</button>
-            </div>
-            <Link to="/login">Have an account? Login</Link>
-            </form>
         </div>
     </div>
 </body>

@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useSelector } from 'react-redux';
+import './profile.css';
 // week 21 25 src/pages/profile.jsx
 // set up token stuff from ^ app.jsx
 
