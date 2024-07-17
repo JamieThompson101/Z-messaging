@@ -52,6 +52,7 @@ h2 {
 
 .profile-button:hover {
     background-color: lightgray;
+    cursor: pointer;
 }
 
 /* Login and signup styling */
@@ -315,4 +316,73 @@ ul {
     .chat-container li .chat-text {
         font-size: .8rem;
     }
+}
+
+/* Profile styling */
+.profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    width: 350px;
+    background-color: lightgray;
+    border: none;
+}
+
+.pfp {
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    height: 140px;
+    width: 140px;
+    border: solid 2px gray;
+}
+
+.pfp:hover {
+    cursor: pointer;
+    background-color: lightgray;
+}
+
+.name {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.userId {
+    font-size: 14px;
+    font-weight: 600;
+    margin: 20px;
+}
+
+.edit {
+    height: 40px;
+    width: 150px;
+    border: none;
+    background-color: #000;
+    color: #aeaeae;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 15px;
+}
+
+.edit:hover {
+    cursor: pointer;
+    background-color: #424242;
+}
+
+.userInfo {
+    margin: 20px;
+    font-size: 15px;
+    font-weight: 500
 }

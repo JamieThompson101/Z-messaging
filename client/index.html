@@ -15,36 +15,14 @@
             <!-- dynamically change profile button to user pfp if logged in? -->
             <button class="profile-button">Profile</button>
         </div>
-        <div class="row signup">
-            <form class="input" onSubmit={handleFormSubmit}>
-            <h2>Signup</h2>
-            <div class="email">
-                <label htmlFor="email">Email address:</label>
-                <input
-                    class="email-input"
-                    placeholder="youremail@test.com"
-                    name="email"
-                    type="email"
-                    id="email"
-                    onChange={handleChange}
-                />
+        <div class="row profile">
+            <div class="card">
+                <button class="pfp">Profile</button>
+                <span class="name">{state.user.firstName}  {state.user.lastName}</span>
+                <span class="userId">@jd743</span>
+                <button class="edit">Edit Profile</button>
+                <span class="userInfo">Insert user information</span>
             </div>
-            <div class="password">
-                <label htmlFor="pwd">Password:</label>
-                <input
-                    class="password-input"
-                    placeholder="******"
-                    name="password"
-                    type="password"
-                    id="pwd"
-                    onChange={handleChange}
-                />
-            </div>
-            <div class="submit">
-                <button class="signup-submit" type="submit">Submit</button>
-                <Link to="/login">Have an account? Login</Link>
-            </div>
-            </form>
         </div>
     </div>
 </body>

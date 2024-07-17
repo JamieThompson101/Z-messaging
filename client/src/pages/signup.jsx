@@ -38,6 +38,7 @@ const Signup = () => {
             <div className="email">
                 <label htmlFor="email">Email address:</label>
                 <input
+                    className="email-input"
                     placeholder="youremail@test.com"
                     name="email"
                     type="email"
@@ -48,6 +49,7 @@ const Signup = () => {
             <div className="password">
                 <label htmlFor="pwd">Password:</label>
                 <input
+                    className="password-input"
                     placeholder="******"
                     name="password"
                     type="password"
@@ -56,9 +58,9 @@ const Signup = () => {
                 />
             </div>
             <div className="submit">
-                <button type="submit">Submit</button>
+                <button className="signup-submit" type="submit">Submit</button>
+                <Link to="/login">Have an account? Login</Link>
             </div>
-            <Link to="/login">Have an account? Login</Link>
             </form>
         </div>
     )
