@@ -38,6 +38,7 @@ function Login(props) {
             <div className="email">
                 <label htmlFor="email">Email address:</label>
                 <input
+                    className="email-input"
                     placeholder="youremail@test.com"
                     name="email"
                     type="email"
@@ -48,6 +49,7 @@ function Login(props) {
             <div className="password">
                 <label htmlFor="pwd">Password:</label>
                 <input
+                    className="password-input"
                     placeholder="******"
                     name="password"
                     type="password"
@@ -61,9 +63,9 @@ function Login(props) {
                 </div>
             ) : null}
             <div className="submit">
-                <button type="submit">Submit</button>
+                <button className="login-submit" type="submit">Submit</button>
+                <Link to="/signup"> Go to Signup</Link>
             </div>
-            <Link to="/signup"> Go to Signup</Link>
             </form>
         </div>
   );
