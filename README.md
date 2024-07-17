@@ -20,7 +20,7 @@ As a user, I want to be able to log in to a fully functional messaging app and i
 
 ## Description
 
-Z-messaging is a full-stack messaging application built with [stream.io](https://getstream.io/chat/docs/react/message_history/?language=javascript)
+Z-messaging is a full-stack messaging application that utilizes React, MongoDB, express, and Mongoose ODM.
 
 ## Features
 
@@ -44,7 +44,7 @@ To run Z-messaging locally, follow these steps:
 
 1. **Clone the repository**:
    ```
-   git clone https://github.com/your-username/MessagingApp.git
+   git clone https://github.com/your-username/Z-messaging.git
    ```
 
 2. **Navigate to the project directory**:
@@ -68,7 +68,7 @@ To run Z-messaging locally, follow these steps:
 
 6. **Open your browser**:
    ```
-   Visit http://localhost:3000 to view the app.
+   Visit http://localhost:3001 to view the app.
    ```
 
 ## Usage
@@ -99,9 +99,6 @@ To run Z-messaging locally, follow these steps:
 
 - **Authentication**:
   - JSON Web Tokens (JWT)
-
-- **Real-time Messaging**:
-  - Stream.IO
 
 ## Contributing
 
