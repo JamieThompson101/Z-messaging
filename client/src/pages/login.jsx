@@ -33,7 +33,7 @@ function Login(props) {
 
      return (
         <div className="row login">
-            <form className="input" onSumbit={handleFormSubmit}>
+            <form className="input" onSubmit={handleFormSubmit}>
             <h2>Login</h2>
             <div className="email">
                 <label htmlFor="email">Email address:</label>
