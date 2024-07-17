@@ -2,4 +2,6 @@ const chatRoom = require('./chatRoom');
 
 const User = require('./User');
 
-module.exports = { chatRoom, User };
+const message = require('./message');
+
+module.exports = { chatRoom, User, message };
