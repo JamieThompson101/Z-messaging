@@ -15,6 +15,7 @@ As a user, I want to be able to log in to a fully functional messaging app and i
 - [Usage](#usage)
 - [Technologies Used](#technologies-used)
 - [Contributing](#contributing)
+- [Links](#links)
 - [License](#license)
 
 ## Description
@@ -104,7 +105,7 @@ To run Z-messaging locally, follow these steps:
 
 ## Contributing
 
-Contributions are welcome! To contribute to MessagingApp, follow these steps:
+Contributions are welcome! To contribute to Z-messaging, follow these steps:
 
 1. Fork the repository.
 2. Create a new branch (`git checkout -b feature/improvement`).
@@ -113,9 +114,13 @@ Contributions are welcome! To contribute to MessagingApp, follow these steps:
 5. Push to the branch (`git push origin feature/improvement`).
 6. Create a new Pull Request.
 
+## Links
+
+The app is deployed on [render](https://z-messaging.onrender.com/)
+
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details or contact us via our respective githubs.
 
 ---
 
