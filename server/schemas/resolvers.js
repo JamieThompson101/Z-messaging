@@ -1,11 +1,11 @@
-const { users, chatRoom } = require('../models');
+const { User, chatRoom } = require('../models');
 
 const resolvers = {
   Query: {
     // Fetch all users
     getAllUsers: async () => {
       try {
-        const allUsers = await users.findAll();
+        const allUsers = await User.find();
         return allUsers;
       } catch (error) {
         console.error("Error fetching users:", error);
@@ -15,7 +15,7 @@ const resolvers = {
     // Fetch a single user by ID
     getUserById: async (_, { id }) => {
       try {
-        const user = await users.findByPk(id);
+        const user = await User.findById(id);
         if (!user) {
           throw new Error("User not found");
         }
