@@ -1,4 +1,4 @@
-const message = require(mongoose);
+const Message = require(mongoose);
 
 const { Schema } = message;
 
@@ -20,8 +20,12 @@ const messageSchema = new Schema({
         required: true,
         ref: 'chatRoom',
     },
+    toJson: {
+        virtual: true,
+    },
+    id: false,
     });
 
-const Message = message.model('Message', messageSchema);
+const message = message.model('Message', messageSchema);
 
 module.exports = Message;
