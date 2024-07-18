@@ -10,7 +10,7 @@ const Profile = () => {
         <div className="row profile">
             <div className="card">
                 <button className="pfp">Profile</button>
-                <span className="name">{state.user.firstName}  {state.user.lastName}</span>
+                <span className="name">Jane Doe</span>
                 <span className="userId">@jd743</span>
                 <button className="edit">Edit Profile</button>
                 <span className="userInfo">Insert user information</span>
