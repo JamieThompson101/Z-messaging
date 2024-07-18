@@ -3,7 +3,7 @@ import { useMutation } from '@apollo/client';
 import { Link } from 'react-router-dom';
 import { LOGIN } from '../utils/mutation';
 import Auth from '../utils/auth';
-import './login.css';
+import './loginsignup.css';
 
 function Login(_props) {
     const [fromState, setFormState] = useState({ email: '', password: '' });
