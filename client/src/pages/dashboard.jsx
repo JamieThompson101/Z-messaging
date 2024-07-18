@@ -60,6 +60,7 @@ function Dashboard() {
                     </ul>
                     <div className="text">
                         <textarea className="chat-text" placeholder="Z-messaging"></textarea>
+                        <button className="chat-send">Send</button>
                     </div>
                 </div>
             </div>

@@ -108,9 +108,29 @@ ul {
     font-weight: 700;
 }
 
+.text {
+    display: block;
+}
+
 .chat-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
     position: fixed;
     bottom: 40px;
+    border-radius: 20px;
+    width: 60%;
+}
+
+.chat-send {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    position: fixed;
+    bottom: 40px;
+    border-radius: 20px;
 }
 
 .chat-container li.chat-left {
