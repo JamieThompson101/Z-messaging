@@ -1,4 +1,5 @@
-const { User, chatRoom } = require('../models');
+const { get } = require('mongoose');
+const { User, chatRoom, Message } = require('../models');
 
 const resolvers = {
   Query: {
@@ -25,10 +26,34 @@ const resolvers = {
         throw new Error(error);
       }
     },
+
+    // Fetch all messages
+    getAllMessages: async () => {
+      try {
+        const allMessages = await Message.find();
+        return allMessages;
+      } catch (error) {
+        console.error("Error fetching messages:", error);
+        throw new Error(error);
+      }
+    },
+    // Fetch a single message by ID
+    getMessageById: async (_, { id }) => {
+      try {
+        const message = await Message.findById(id);
+        if (!message) {
+          throw new Error("Message not found");
+        }
+        return message;
+      } catch (error) {
+        console.error("Error fetching message:", error);
+        throw new Error(error);
+      }
+    },
     // Fetch all chat rooms
     getAllChatRooms: async () => {
       try {
-        const allChatRooms = await chatRoom.findAll();
+        const allChatRooms = await chatRoom.find();
         return allChatRooms;
       } catch (error) {
         console.error("Error fetching chat rooms:", error);
@@ -38,7 +63,7 @@ const resolvers = {
     // Fetch a single chat room by ID
     getChatRoomById: async (_, { id }) => {
       try {
-        const room = await chatRoom.findByPk(id);
+        const room = await chatRoom.findById(id);
         if (!room) {
           throw new Error("Chat room not found");
         }
@@ -57,6 +82,16 @@ const resolvers = {
         return newUser;
       } catch (error) {
         console.error("Error creating user:", error);
+        throw new Error(error);
+      }
+    },
+    // Create a new message
+    createMessage: async (_, { messageInput }) => {
+      try {
+        const newMessage = await Message.create(messageInput);
+        return newMessage;
+      } catch (error) {
+        console.error("Error creating message:", error);
         throw new Error(error);
       }
     },

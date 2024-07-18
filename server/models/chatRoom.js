@@ -1,32 +1,31 @@
-const { Schema, model } = require('mongoose');
+const mongoose = require('mongoose');
+
+const { Schema, model } = mongoose;
 
 const chatSchema = new Schema(
     {
-        chatId: {
-            type: Schema.Types.ObjectId,
-            required: true,
-            ref: 'User',
-        }, 
-        
-        users: [
-            {
-            type: Schema.Types.ObjectId,
-            ref: 'User',
-            },
-        ], 
-        messages: {
+        chatName: {
             type: String,
-            required: false,
+            required: true,
         },
+       description: {
+            type: String,
+            required: true,
+        },
+        messages: [
+            {
+                type: Schema.Types.ObjectId,
+                ref: 'Message',
+            },
+        ],
     },
-       
     {
         toJSON: {
             virtual: true,
         },
-        id: false,
+        id: true,
     }
 );  
-const chatRoom = model('chatRoom', chatSchema);
+const chatRoom = mongoose.model('chatRoom', chatSchema);
 // add this later when necessary
-module.exports = { chatRoom };
+module.exports = chatRoom;
