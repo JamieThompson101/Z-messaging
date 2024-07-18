@@ -1,0 +1,23 @@
+[
+    {
+        "chatName": "General Chat",
+        "description": "A place for general discussion"
+    },
+    {
+        "chatName": "Tech Talk",
+        "description": "A place to discuss all things tech"
+    },
+    {
+        "chatName": "Music",
+        "description": "A place to discuss all things music"
+    },
+    {
+        "chatName": "Movies",
+        "description": "A place to discuss all things movies"
+    },
+    {
+        "chatName": "Video Games",
+        "description": "A place to discuss all things video games"
+    }
+
+]
