@@ -4,6 +4,7 @@ import Login from './pages/login.jsx';
 import NoMatch from './pages/NoMatch.jsx';
 import App from './App.jsx';
 import Home from './pages/Home.jsx';
+import Dashboard from './pages/dashboard.jsx';
 // import './index.css'
 
 
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
        {
         path: '/login',
         element: <Login />
+      },
+        {
+        path: '/dashboard',
+        element: <Dashboard />
       },
     ],
   },
