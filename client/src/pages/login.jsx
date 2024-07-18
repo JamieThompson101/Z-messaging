@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useMutation } from '@apollo/client';
-import { Link, navigate } from 'react-router-dom'; // Import the 'navigate' function
+import { Link, useNavigate } from 'react-router-dom'; // Import the 'navigate' function
 import { LOGIN } from '../utils/mutation';
 import Auth from '../utils/auth';
 import './loginsignup.css';
@@ -17,7 +17,7 @@ function Login(_props) {
             });
             const token = mutationResponse.data.login.token;
             Auth.login(token);
-            navigate('/dashboard'); // Redirect to dashboard on successful login
+            useNavigate('/dashboard'); // Redirect to dashboard on successful login
         } catch (e) {
             console.log(e);
         }
