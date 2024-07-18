@@ -1,8 +1,8 @@
 import { gql } from '@apollo/client';
 
 export const LOGIN = gql`
-mutation login($email: String!, $password: Spring!) {
-login(email: $email, password: $password) {
+mutation login($email: String!, $password: String!) {
+  login(email: $email, password: $password) {
     token
     user {
       _id
@@ -12,21 +12,11 @@ login(email: $email, password: $password) {
 `;
 
 export const ADD_USER = gql`
-mutation addUser(
-$firstName: String!
-$lastName: String!
-$email: String!
-$password: String!
-) {
-    addUser(
-    $firstName: $firstName
-    lastName: $lastName
-    email: $email
-    password: $password
-    ) {
+mutation addUser($name: String!, $email: String!, $password: String!) {
+  addUser(name: $name, email: $email, password: $password) {
     token
     user {
-      !id
+      _id
     }
   }
 }
