@@ -16,8 +16,6 @@ db.once('open', async () => {
   console.log('Users seeded!');
   await Message.insertMany(messageData)
   console.log('Messages seeded!');
-  await chatRoom.insertMany(chatData)
-  console.log('Chat Rooms seeded!');
   console.log('All done!');
   
   process.exit(0);
