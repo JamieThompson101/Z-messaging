@@ -20,7 +20,6 @@ const messageSchema = new Schema({
         trim: true,
     },
     toJson: {
-        virtual: true,
         id: true,
     },
     });
