@@ -19,12 +19,6 @@ const chatSchema = new Schema(
             },
         ],
     },
-    {
-        toJSON: {
-            virtual: true,
-        },
-        id: true,
-    }
 );  
 const chatRoom = mongoose.model('chatRoom', chatSchema);
 // add this later when necessary
