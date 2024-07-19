@@ -17,9 +17,12 @@ const messageSchema = new Schema({
         type: String,
         required: true,
         unique: true,
-        trim: true
-    }
-
+        trim: true,
+    },
+    toJson: {
+        virtual: true,
+        id: true,
+    },
     });
 
 const message = mongoose.model('Message', messageSchema);

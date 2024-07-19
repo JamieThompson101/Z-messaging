@@ -4,4 +4,4 @@ const User = require('./User');
 
 const message = require('./message');
 
-module.exports = { chatRoom, User, message };1
+module.exports = { chatRoom, User, message };
