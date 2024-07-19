@@ -1,4 +1,5 @@
-const { User, chatRoom } = require('../models');
+const { get } = require('mongoose');
+const { User, message } = require('../models');
 
 const resolvers = {
   Query: {
@@ -25,29 +26,53 @@ const resolvers = {
         throw new Error(error);
       }
     },
-    // Fetch all chat rooms
-    getAllChatRooms: async () => {
+
+    // Fetch all messages
+    getAllMessages: async () => {
       try {
-        const allChatRooms = await chatRoom.findAll();
-        return allChatRooms;
+        const allMessages = await message.find();
+        return allMessages;
       } catch (error) {
-        console.error("Error fetching chat rooms:", error);
+        console.error("Error fetching messages:", error);
         throw new Error(error);
       }
     },
-    // Fetch a single chat room by ID
-    getChatRoomById: async (_, { id }) => {
+    // Fetch a single message by ID
+    getMessageById: async (_, { id }) => {
       try {
-        const room = await chatRoom.findByPk(id);
-        if (!room) {
-          throw new Error("Chat room not found");
+        const Message = await message.findById(id);
+        if (!message) {
+          throw new Error("Message not found");
         }
-        return room;
+        return Message;
       } catch (error) {
-        console.error("Error fetching chat room:", error);
+        console.error("Error fetching message:", error);
         throw new Error(error);
       }
-    }
+    },
+    // Fetch all chat rooms
+    // getAllChatRooms: async () => {
+    //   try {
+    //     const allChatRooms = await chatRoom.find();
+    //     return allChatRooms;
+    //   } catch (error) {
+    //     console.error("Error fetching chat rooms:", error);
+    //     throw new Error(error);
+    //   }
+    // },
+    // Fetch a single chat room by ID
+    // getChatRoomById: async (_, { id }) => {
+    //   try {
+    //     const room = await chatRoom.findById(id);
+    //     if (!room) {
+    //       throw new Error("Chat room not found");
+    //     }
+    //     return room;
+    //   } catch (error) {
+    //     console.error("Error fetching chat room:", error);
+    //     throw new Error(error);
+    //   }
+    // }
   },
   Mutation: {
     // Create a new user
@@ -60,16 +85,26 @@ const resolvers = {
         throw new Error(error);
       }
     },
-    // Create a new chat room
-    createChatRoom: async (_, { roomInput }) => {
+    // Create a new message
+    createMessage: async (_, { messageInput }) => {
       try {
-        const newRoom = await chatRoom.create(roomInput);
-        return newRoom;
+        const newMessage = await Message.create(messageInput);
+        return newMessage;
       } catch (error) {
-        console.error("Error creating chat room:", error);
+        console.error("Error creating message:", error);
         throw new Error(error);
       }
-    }
+    },
+    // Create a new chat room
+    // createChatRoom: async (_, { roomInput }) => {
+    //   try {
+    //     const newRoom = await chatRoom.create(roomInput);
+    //     return newRoom;
+    //   } catch (error) {
+    //     console.error("Error creating chat room:", error);
+    //     throw new Error(error);
+    //   }
+    // }
   }
 };
 

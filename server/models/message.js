@@ -1,31 +1,30 @@
-const Message = require(mongoose);
+const mongoose = require('mongoose');
 
-const { Schema } = message;
+const { Schema, model } = mongoose;
 
 const messageSchema = new Schema({
     message: {
         type: String,
         required: true,
-        unique: true,
-        trim: true
+        minlength: 1,
+        maxlength: 280,
+    },
+    createdAt: {
+        type: Date,
+        default: Date.now,
     },
     username: {
         type: String,
         required: true,
         unique: true,
-        trim: true
-    },
-    chatId: {
-        type: Schema.Types.ObjectId,
-        required: true,
-        ref: 'chatRoom',
+        trim: true,
     },
     toJson: {
         virtual: true,
+        id: true,
     },
-    id: false,
     });
 
-const message = message.model('Message', messageSchema);
+const message = mongoose.model('Message', messageSchema);
 
-module.exports = Message;
+module.exports = message;
