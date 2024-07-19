@@ -13,7 +13,7 @@ const typeDefs = `
   }
   type Query {
     getAllUsers: [User]
-    getMessages: [Message]
+    getAllMessages: [Message]
     getMessageById(id: ID!): Message
     getUserById(id: ID!): User
   }
