@@ -1,10 +1,12 @@
 import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Login from './pages/login.jsx';
+import Signup from './pages/signup.jsx';
 import NoMatch from './pages/NoMatch.jsx';
 import App from './App.jsx';
-import Home from './pages/Home.jsx';
+import Home from './pages/home.jsx';
 import Dashboard from './pages/dashboard.jsx';
+import Profile from './pages/profile.jsx';
 // import './index.css'
 
 
@@ -16,7 +18,7 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <Home />
+        element: <Dashboard />
       },
        {
         path: '/login',
@@ -25,6 +27,14 @@ const router = createBrowserRouter([
         {
         path: '/dashboard',
         element: <Dashboard />
+      },
+      {
+        path: '/signup',
+        element: <Signup />
+      },
+      {
+        path: '/profile',
+        element: <Profile />
       },
     ],
   },

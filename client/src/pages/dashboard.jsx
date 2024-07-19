@@ -28,7 +28,7 @@ function Dashboard() {
                         <li className="person">
                             <img src="https://www.bootdey.com/img/Content/avatar/avatar3.png"/>
                             <span className="status"></span>
-                            <span className="name">Jerk Doe</span>
+                            <span className="name">Doe Johnson</span>
                         </li>
                     </ul>
                 </div>
